@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Answer } from '../model/answer.model';
 import { Quiz } from '../model/quiz.model';
 import { QuizService } from '../service/quiz.service';
 
@@ -9,31 +11,28 @@ import { QuizService } from '../service/quiz.service';
 })
 export class QuizComponent implements OnInit {
   quizzes: Quiz[] = [];
+  quiz: Quiz = new Quiz();
 
-  currentQuiz = 0;
-  answerSelected = false;
   result = false;
 
+  currentQuiz = 0;
   correctAnswer = 0;
   inCorrectAnswer = 0;
 
   constructor(private quizService: QuizService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.quizzes = this.quizService.getQuizzez();
   }
 
+  onAnswer(quiz: Quiz, answer: Answer) {
+    quiz.answer.forEach((x) => { if (x.id == answer.id) { x.selected = true } else { x.selected = false } console.log(x) })
 
-  onAnswer(option: boolean, choice: any) {
     setTimeout(() => {
-      this.currentQuiz++;
+      if (this.currentQuiz < 7) {
+        this.next();
+      }
     }, 1000);
-
-    if (option) {
-      this.correctAnswer++;
-    } else {
-      this.inCorrectAnswer++;
-    }
   }
 
   prev() {
@@ -42,11 +41,19 @@ export class QuizComponent implements OnInit {
 
   next() {
     this.currentQuiz++;
+  }
 
+  isAnswered(question: Quiz) {
+    return question.answer.find(x => x.selected) ? 'Answered' : 'Not Answered';
+  };
+
+  isCorrect(question: Quiz) {
+    return question.answer.every(x => x.selected === x.correct) ? 'correct' : 'wrong';
   }
 
   showResult() {
+    let answers = [];
+    this.quiz.answer.forEach(x => answers.push({ 'quizId': this.quiz.id, 'questionId': x.id, 'selected': x.selected }));
     this.result = true;
   }
-
 }

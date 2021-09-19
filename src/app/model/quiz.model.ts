@@ -1,4 +1,8 @@
+import { Answer } from "./answer.model";
+
 export class Quiz {
+    id: number
     question: string;
-    answer: { option: string, correct: boolean } [];
+    questionTypeId: number;
+    answer: Answer[] = [];
 }
