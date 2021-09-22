@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Answer } from '../model/answer.model';
 import { Quiz } from '../model/quiz.model';
@@ -25,8 +24,9 @@ export class QuizComponent implements OnInit {
     this.quizzes = this.quizService.getQuizzez();
   }
 
+
   onAnswer(quiz: Quiz, answer: Answer) {
-    quiz.answer.forEach((x) => { if (x.id == answer.id) { x.selected = true } else { x.selected = false } console.log(x) })
+    quiz.answer.forEach((x) => { if (x.id == answer.id) { x.selected = true } else { x.selected = false } })
 
     setTimeout(() => {
       if (this.currentQuiz < 7) {
@@ -49,6 +49,12 @@ export class QuizComponent implements OnInit {
 
   isCorrect(question: Quiz) {
     return question.answer.every(x => x.selected === x.correct) ? 'correct' : 'wrong';
+  }
+
+  goToQuestion(index: number) {
+    if (index >= 0 && index < this.quizzes.length) {
+      this.currentQuiz = index;
+    }
   }
 
   showResult() {

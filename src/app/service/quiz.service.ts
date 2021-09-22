@@ -1,12 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Quiz } from '../model/quiz.model';
-import data from '../../data/HTML.json'
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuizService {
+
+  constructor(private http: HttpClient) { }
 
   quizzes: Quiz[] = [
     {
@@ -98,8 +100,6 @@ export class QuizService {
       ]
     },
   ]
-
-  constructor() { }
 
   getQuizzez() {
     return this.quizzes;
