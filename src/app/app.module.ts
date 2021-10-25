@@ -7,12 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BackgroundDirective } from './directives/correctAnswer.directive';
+import { ResultComponent } from './result/result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuizComponent
-  ],
+    QuizComponent,
+    BackgroundDirective,
+    ResultComponent
+    ],
   imports: [
     BrowserModule,
     FormsModule,

@@ -1,65 +1,52 @@
-<div class="container p-5">
-    <div class="col-sm-8 offset-2 mt-5" *ngIf="currentQuiz < 8">
-        <div class="card text-dark bg-light">
-            <div class="card-content">
-                <p class="card-title text-center">{{currentQuiz + 1}} of {{quizzes.length}}</p>
-                <h3 class="text-center m-4">{{quizzes[currentQuiz].question}}</h3>
-            </div>
-            <div class="card-action">
-                <ul class="list-group mb-4">
-                    <ng-container *ngFor="let option of quizzes[currentQuiz].answer; let i = index">
-                        <li class="list-group-item mx-3 p-3">
-                            <input id="{{option.id}}" type="radio" name="options" [checked]="option.selected"
-                                (change)="onAnswer(quizzes[currentQuiz], option)" />
-                            {{option.option}}
-                        </li>
-                    </ng-container>
-                </ul>
-            </div>
-            <div class="text-center buttons">
-                <button class="btn btn-outline-danger" [disabled]="currentQuiz < 1" (click)="prev()">
-                    Prev </button>
-                <button class="btn btn-outline-danger" [disabled]="currentQuiz > 6" (click)="next()">
-                    Next</button>
-            </div>
-            <button class="btn btn-secondary mt-2" *ngIf="currentQuiz === 7" (click)="next()">Compete The Quiz</button>
+<div class="col-sm-8 offset-2 mt-5" *ngIf="currentQuiz < 8">
+    <div class="card text-dark bg-light">
+        <div class="card-content">
+            <p class="card-title text-center">{{currentQuiz + 1}} of {{quizzes.length}}</p>
+            <h3 class="text-center m-4">{{quizzes[currentQuiz].question}}</h3>
         </div>
+        <div class="card-action">
+            <ul class="list-group mb-4">
+                <ng-container *ngFor="let option of quizzes[currentQuiz].answer; let i = index">
+                    <li class="list-group-item mx-3 p-3">
+                        <input #radioInput id="{{option.id}}" type="radio" name="options" [checked]="option.selected"
+                            (change)="onAnswer(quizzes[currentQuiz], option)" />
+                        {{option.option}}
+                    </li>
+                </ng-container>
+            </ul>
+        </div>
+        <div class="text-center buttons">
+            <button class="btn btn-outline-danger" [disabled]="currentQuiz < 1" (click)="prev()">
+                Prev </button>
+            <button class="btn btn-outline-danger" [disabled]="currentQuiz > 6" (click)="next()">
+                Next</button>
+        </div>
+        <button class="btn btn-secondary mt-2" *ngIf="currentQuiz === 7" (click)="next()">Complete The Quiz</button>
     </div>
+</div>
 
-    <div class="card offset-2 w-75" *ngIf="currentQuiz > 7">
-        <h3 class="card-header">
-            Completed!
-        </h3>
-        <div class="card-body">
-            <div *ngIf="result">
-                <div class="card-text">
-                    <h2>Quiz Result</h2>
-                    <div *ngFor="let question of quizzes; let index = index">
-                        <div class="result-question">
-                            <h4>{{index + 1}}. {{question.question}}</h4>
-                            <div class="row">
-                                <div class="col-6" *ngFor="let Option of question.answer">
-                                    <input id="{{Option.id}}" type="checkbox" disabled="disabled"
-                                    [checked]="Option.selected" /> {{Option.option}}
-                                </div>
-                            </div>
-                            <h5
-                                class="p-1 m-2 alert {{ isCorrect(question) == 'correct'? 'alert-success': 'alert-danger'}}">
-                                Your answer is {{isCorrect(question)}}.</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row text-center" *ngIf="!result">
+<div class="card offset-2 w-75" *ngIf="currentQuiz > 7 && !result">
+    <h3 class="card-header">
+        Completed!
+    </h3>
+    <div class="card-body">
+        <div>
+            <div class="row text-center">
                 <div class="col-4 cursor-pointer" *ngFor="let question of quizzes; let index = index;">
-                    <div (click)="goToQuestion(index)" role="button" class="p-3 mb-2 {{ isAnswered(question) == 'Answered'? 'bg-primary': 'bg-warning' }}">{{index + 1}}. {{ isAnswered(question) }}
+                    <div (click)="goToQuestion(index)" role="button"
+                        class="p-3 mb-2 {{ isAnswered(question) == 'Answered'? 'bg-primary': 'bg-warning' }}">
+                        {{index + 1}}. {{ isAnswered(question) }}
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-5" *ngIf="!result">
+            <div class="text-center mt-5">
                 <button class="btn btn-danger text-center" (click)="prev()">Back To Quiz</button>
-                <button class="btn btn-success text-center ms-4" (click)="showResult()">Show Result</button>
+                <button class="btn btn-success text-center ms-4" (click)="showResult()">Show
+                    Result</button>
             </div>
         </div>
     </div>
+</div>
+<div *ngIf="result">
+    <app-result></app-result>
 </div>

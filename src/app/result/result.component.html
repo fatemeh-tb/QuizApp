@@ -1,0 +1,25 @@
+<div class="card offset-2 w-75">
+    <h3 class="card-header">
+        Quiz Result
+    </h3>
+    <div class="card-body">
+        <div class="card-text">
+            <div *ngFor="let question of quizzes; let index = index">
+                <div class="result-question">
+                    <h4 class="mb-0">{{index + 1}}. {{question.question}}</h4>
+                    <h5 class=" ms-3 {{ isCorrect(question) == 'correct'? 'text-success': 'text-danger'}}"
+                        style="font-weight: 600;">
+                        Your selected answer is {{isCorrect(question)}}
+                    </h5>
+                    <div class="row m-3">
+                        <div class="col-6 mb-2 result-option" *ngFor="let Option of question.answer" appCorect
+                            [correctAnswer]="Option.correct">
+                            <input id="{{Option.id}}" type="checkbox" disabled="disabled"
+                                [checked]="Option.selected" />{{Option.option}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

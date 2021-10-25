@@ -1,4 +1,4 @@
- [
+[
     {
         "id": 1010,
         "question": "HTML stands for what?",
@@ -42,28 +42,28 @@
             {
                 "id": 1055,
                 "questionId": 1011,
-                "option": "'A head section, and within it a title, followed by a body'",
+                "option": "A head section, and within it a title, followed by a body",
                 "selected": false,
                 "correct": false
             },
             {
                 "id": 1056,
                 "questionId": 1011,
-                "option": "'A title section, and within it a header, followed by a body'",
-                "selected": false,
-                "correct": false
-            },
-            {
-                "id": 1057,
-                "questionId": 1011,
-                "option": "'A body and header'",
+                "option": "A body and header",
                 "selected": false,
                 "correct": true
             },
             {
+                "id": 1057,
+                "questionId": 1011,
+                "option": "A title section, and within it a header, followed by a body",
+                "selected": false,
+                "correct": false
+            },
+            {
                 "id": 1058,
                 "questionId": 1011,
-                "option": "'None of these'",
+                "option": "None of these",
                 "selected": false,
                 "correct": false
             }
@@ -77,30 +77,30 @@
             {
                 "id": 1055,
                 "questionId": 1012,
-                "option": "'<Title>'",
+                "option": "<Title>",
                 "selected": false,
                 "correct": false
             },
             {
                 "id": 1056,
                 "questionId": 1012,
-                "option": "'</Title>'",
+                "option": "</Title>",
                 "selected": false,
                 "correct": false
             },
             {
                 "id": 1057,
                 "questionId": 1012,
-                "option": "'<Body>'",
+                "option": "</Body>",
                 "selected": false,
-                "correct": true
+                "correct": false
             },
             {
                 "id": 1058,
                 "questionId": 1012,
-                "option": "'</Body>'",
+                "option": "<Body>",
                 "selected": false,
-                "correct": false
+                "correct": true
             }
         ]
     },
@@ -112,28 +112,28 @@
             {
                 "id": 1055,
                 "questionId": 1013,
-                "option": "'Img src=Glass.jpeg'",
+                "option": "Img src=Glass.jpeg",
                 "selected": false,
                 "correct": true
             },
             {
                 "id": 1056,
                 "questionId": 1013,
-                "option": "'P....Glass.jpeg..../p'",
+                "option": "P....Glass.jpeg..../p",
                 "selected": false,
                 "correct": false
             },
             {
                 "id": 1057,
                 "questionId": 1013,
-                "option": "'Img file=Glass.jpeg'",
+                "option": "Img file=Glass.jpeg",
                 "selected": false,
                 "correct": false
             },
             {
                 "id": 1058,
                 "questionId": 1013,
-                "option": "'Picture=Glass.jpeg'",
+                "option": "Picture=Glass.jpeg",
                 "selected": false,
                 "correct": false
             }
@@ -147,28 +147,28 @@
             {
                 "id": 1055,
                 "questionId": 1014,
-                "option": "'A'",
+                "option": "A",
                 "selected": false,
                 "correct": false
             },
             {
                 "id": 1056,
                 "questionId": 1014,
-                "option": "'M'",
-                "selected": false,
-                "correct": false
-            },
-            {
-                "id": 1057,
-                "questionId": 1014,
-                "option": "'Em'",
+                "option": "Em",
                 "selected": false,
                 "correct": true
             },
             {
+                "id": 1057,
+                "questionId": 1014,
+                "option": "M",
+                "selected": false,
+                "correct": false
+            },
+            {
                 "id": 1058,
                 "questionId": 1014,
-                "option": "'Tb'",
+                "option": "Tb",
                 "selected": false,
                 "correct": false
             }
@@ -182,28 +182,28 @@
             {
                 "id": 1055,
                 "questionId": 1015,
-                "option": "'ll'",
+                "option": "ll",
                 "selected": false,
                 "correct": false
             },
             {
                 "id": 1056,
                 "questionId": 1015,
-                "option": "'ls'",
+                "option": "ls",
                 "selected": false,
                 "correct": false
             },
             {
                 "id": 1057,
                 "questionId": 1015,
-                "option": "'ol or ul'",
+                "option": "ol or ul",
                 "selected": false,
                 "correct": true
             },
             {
                 "id": 1058,
                 "questionId": 1015,
-                "option": "'ul or ls'",
+                "option": "ul or ls",
                 "selected": false,
                 "correct": false
             }
@@ -217,65 +217,65 @@
             {
                 "id": 1055,
                 "questionId": 1016,
-                "option": "'TIF'",
+                "option": "TIF",
                 "selected": false,
                 "correct": false
             },
             {
                 "id": 1056,
                 "questionId": 1016,
-                "option": "'GIF'",
+                "option": "GIF",
                 "selected": false,
                 "correct": false
             },
             {
                 "id": 1057,
                 "questionId": 1016,
-                "option": "'JPEG'",
-                "selected": false,
-                "correct": true
-            },
-            {
-                "id": 1058,
-                "questionId": 1016,
-                "option": "'QRL'",
+                "option": "QRL",
                 "selected": false,
                 "correct": false
             },
             {
-                "id": 1017,
-                "question": "Which formats are examples of lossless files?",
-                "questionTypeId": 1,
-                "answer": [
-                    {
-                        "id": 1055,
-                        "questionId": 1017,
-                        "option": "'JPEG & GIF'",
-                        "selected": false,
-                        "correct": false
-                    },
-                    {
-                        "id": 1056,
-                        "questionId": 1017,
-                        "option": "'GIF & TIF'",
-                        "selected": false,
-                        "correct": false
-                    },
-                    {
-                        "id": 1057,
-                        "questionId": 1017,
-                        "option": "'RGB & CMYK'",
-                        "selected": false,
-                        "correct": false
-                    },
-                    {
-                        "id": 1058,
-                        "questionId": 1017,
-                        "option": "'PNG & BMP'",
-                        "selected": false,
-                        "correct": true
-                    }
-                ]
+                "id": 1058,
+                "questionId": 1016,
+                "option": "JPEG",
+                "selected": false,
+                "correct": true
+            }
+        ]
+    },
+    {
+        "id": 1017,
+        "question": "Which formats are examples of lossless files?",
+        "questionTypeId": 1,
+        "answer": [
+            {
+                "id": 1055,
+                "questionId": 1017,
+                "option": "JPEG & GIF",
+                "selected": false,
+                "correct": false
+            },
+            {
+                "id": 1056,
+                "questionId": 1017,
+                "option": "GIF & TIF",
+                "selected": false,
+                "correct": false
+            },
+            {
+                "id": 1057,
+                "questionId": 1017,
+                "option": "RGB & CMYK",
+                "selected": false,
+                "correct": false
+            },
+            {
+                "id": 1058,
+                "questionId": 1017,
+                "option": "PNG & BMP",
+                "selected": false,
+                "correct": true
             }
         ]
     }

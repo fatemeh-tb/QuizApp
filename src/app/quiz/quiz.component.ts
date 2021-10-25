@@ -9,14 +9,13 @@ import { QuizService } from '../service/quiz.service';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
+
   quizzes: Quiz[] = [];
   quiz: Quiz = new Quiz();
 
   result = false;
 
   currentQuiz = 0;
-  correctAnswer = 0;
-  inCorrectAnswer = 0;
 
   constructor(private quizService: QuizService) { }
 
@@ -26,8 +25,7 @@ export class QuizComponent implements OnInit {
 
 
   onAnswer(quiz: Quiz, answer: Answer) {
-    quiz.answer.forEach((x) => { if (x.id == answer.id) { x.selected = true } else { x.selected = false } })
-
+    quiz.answer.forEach((x) => { if (x.id == answer.id) { x.selected = true } else { x.selected = false } });
     setTimeout(() => {
       if (this.currentQuiz < 7) {
         this.next();
@@ -47,14 +45,10 @@ export class QuizComponent implements OnInit {
     return question.answer.find(x => x.selected) ? 'Answered' : 'Not Answered';
   };
 
-  isCorrect(question: Quiz) {
-    return question.answer.every(x => x.selected === x.correct) ? 'correct' : 'wrong';
-  }
+
 
   goToQuestion(index: number) {
-    if (index >= 0 && index < this.quizzes.length) {
-      this.currentQuiz = index;
-    }
+    this.currentQuiz = index;
   }
 
   showResult() {
