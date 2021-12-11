@@ -51,9 +51,11 @@ export class QuizComponent implements OnInit {
     this.currentQuiz = index;
   }
 
+
   showResult() {
     let answers = [];
     this.quiz.answer.forEach(x => answers.push({ 'quizId': this.quiz.id, 'questionId': x.id, 'selected': x.selected }));
     this.result = true;
   }
+
 }

@@ -2,7 +2,6 @@
     {
         "id": 1010,
         "question": "HTML stands for what?",
-        "questionTypeId": 1,
         "answer": [
             {
                 "id": 1055,
@@ -37,7 +36,6 @@
     {
         "id": 1011,
         "question": "Every HTML document should have what?",
-        "questionTypeId": 1,
         "answer": [
             {
                 "id": 1055,
@@ -72,7 +70,6 @@
     {
         "id": 1012,
         "question": "What is the tag beginning the section of the Web page that is visible to the viewer/user?",
-        "questionTypeId": 1,
         "answer": [
             {
                 "id": 1055,
@@ -107,7 +104,6 @@
     {
         "id": 1013,
         "question": "Which tag would insert a graphic into a Web page?",
-        "questionTypeId": 1,
         "answer": [
             {
                 "id": 1055,
@@ -142,7 +138,6 @@
     {
         "id": 1014,
         "question": "Use this tag to emphasize text.",
-        "questionTypeId": 1,
         "answer": [
             {
                 "id": 1055,
@@ -177,7 +172,6 @@
     {
         "id": 1015,
         "question": "What is the tag that begins a list of items?",
-        "questionTypeId": 1,
         "answer": [
             {
                 "id": 1055,
@@ -212,7 +206,6 @@
     {
         "id": 1016,
         "question": "Which format is best for high quality Web photos?",
-        "questionTypeId": 1,
         "answer": [
             {
                 "id": 1055,
@@ -247,7 +240,6 @@
     {
         "id": 1017,
         "question": "Which formats are examples of lossless files?",
-        "questionTypeId": 1,
         "answer": [
             {
                 "id": 1055,

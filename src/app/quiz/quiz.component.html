@@ -6,7 +6,7 @@
         </div>
         <div class="card-action">
             <ul class="list-group mb-4">
-                <ng-container *ngFor="let option of quizzes[currentQuiz].answer; let i = index">
+                <ng-container *ngFor="let option of quizzes[currentQuiz].answer;">
                     <li class="list-group-item mx-3 p-3">
                         <input #radioInput id="{{option.id}}" type="radio" name="options" [checked]="option.selected"
                             (change)="onAnswer(quizzes[currentQuiz], option)" />

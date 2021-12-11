@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Answer } from '../model/answer.model';
 import { Quiz } from '../model/quiz.model';
 import { QuizService } from '../service/quiz.service';
 
@@ -10,6 +11,7 @@ import { QuizService } from '../service/quiz.service';
 })
 export class ResultComponent implements OnInit {
   quizzes: Quiz[] = [];
+
 
   constructor(private quizService: QuizService) { }
 
