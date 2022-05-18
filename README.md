@@ -1,5 +1,5 @@
 # QuizApp
 
-Simple Angular Quiz Application.
+This is a simple angular quiz application.
 
- #####[Demo Link](https://fatemeh-tb.github.io/QuizApp/)
+ #####  [Demo Link](https://fatemeh-tb.github.io/QuizApp/)
